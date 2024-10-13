@@ -7,17 +7,22 @@ public class main {
         float f = 14.75f;
         char c1 = '0';
 
-        // 1. Присвоєння значення змінної f змінній l
-        l = (long) f;  // Перетворення типу float до long
-        System.out.println("Значення l після присвоєння f: " + l);
+        l = (long) f;
 
-        // 2. Присвоєння випадкових значень для d1 та d2
         Random rand = new Random();
-        d1 = 100 + rand.nextDouble() * 900; // випадкове значення в діапазоні від 100 до 1000
-        d2 = 1 + rand.nextDouble() * 98;    // випадкове значення в діапазоні від 1 до 99
+        d1 = 100 + rand.nextDouble() * 900;
+        d2 = 1 + rand.nextDouble() * 98;
 
-        System.out.println("Випадкове значення d1: " + d1);
-        System.out.println("Випадкове значення d2: " + d2);
+        double y = (Math.sqrt(d1) - Math.cbrt(d2)) / ((l - d1) * (l * l + d2));
+
+        System.out.println("d1 = " + d1);
+        System.out.println("d2 = " + d2);
+        System.out.println("l = " + l);
+        System.out.println("Значення y = " + y);
+        
     }
 }
+
+
+
 
